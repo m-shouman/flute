@@ -1,0 +1,24 @@
+<div class="">
+  <div v-for="m in messages">
+    <div class="columns">
+      <div v-if="!m.from" class="column conversation-message-container">
+        <i class="fa fa-user-circle fa-3x"></i>
+        <span class="conversation-message">
+          {{m.content}}
+          <i v-if="m.status==2||m.status==3" v-bind:class="{'message-status-second':m.status==2,'message-status-second message-status-seen':m.status==3}"
+            class="fa fa-check message-status"></i>
+          <i v-bind:class="{'fa-clock-o':m.status==0,'fa-check':m.status==1,'message-status-seen':m.status==3}" class="fa message-status"></i>
+        </span>
+      </div>
+      <div v-if="m.from" class="column conversation-message-container conversation-message-from">
+        <span class="conversation-message">
+          {{m.content}}
+          <i v-if="m.status==2||m.status==3" v-bind:class="{'message-status-second':m.status==2,'message-status-second message-status-seen':m.status==3}"
+            class="fa fa-check message-status"></i>
+          <i v-bind:class="{'fa-clock-o':m.status==0,'fa-check':m.status==1,'message-status-seen':m.status==3}" class="fa message-status"></i>
+        </span>
+        <i class="fa fa-user-circle fa-3x"></i>
+      </div>
+    </div>
+  </div>
+</div>

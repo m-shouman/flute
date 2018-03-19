@@ -1,0 +1,23 @@
+.online-status {
+  color: green;
+}
+
+.left {
+  text-align: left;
+}
+
+.freind-element {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.freind-element:hover {
+  background-color: gray;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.firends-list {
+    height: 70%;
+  overflow: auto;
+}

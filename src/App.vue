@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <section class="hero is-primary is-fullheight">
+    <section class="hero is-fullheight">
       <app-header></app-header>
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -25,6 +25,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  /* background-color: hsl(0, 0%, 21%); */
+}
+
+.hero-body{
+  padding: 0px !important;
 }
 
 body::-webkit-scrollbar {
@@ -40,4 +45,6 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+
 </style>

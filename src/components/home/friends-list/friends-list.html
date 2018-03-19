@@ -1,0 +1,15 @@
+<div class="firends-list">
+  <section class="section">
+    <div v-for="f in friends">
+      <div class="freind-element columns">
+        <div class="column is-one-fifth">
+          <i class="fa fa-user-circle fa-2x"></i>
+        </div>
+        <div class="column left">{{f.name}}</div>
+        <div class="column is-one-fifth">
+          <i v-bind:class="{ 'fa-circle-thin': !f.isActive, 'fa-circle': f.isActive }" class="fa online-status"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

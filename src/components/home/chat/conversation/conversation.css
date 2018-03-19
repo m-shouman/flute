@@ -1,0 +1,42 @@
+.conversation-message-container {
+  text-align: left !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 5px;
+}
+
+.conversation-message-from{
+    text-align: right !important;
+}
+
+.conversation-message {
+  position: relative;
+  top: -12px;
+  margin-left: 2px;
+  border-radius: 15px;
+  border: 1px solid rgb(187, 222, 251);
+  background-color: rgb(187, 222, 251);
+  padding-left: 5px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.message-status{
+    font-size: 10px;
+    position: relative;
+    left: 1.5%;
+    top: 10%;
+    color: #9E9E9E;
+}
+
+.message-status-second{
+    left: 2%;
+}
+
+.message-status-seen{
+    color:#43A047;
+}

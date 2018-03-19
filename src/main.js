@@ -12,7 +12,6 @@ import AppHeader from '@/components/_shared/AppHeader';
 import AppFooter from '@/components/_shared/AppFooter';
 
 
-firebase.initializeApp(firebaseConfig.FIREBASE_CONFIG);
 
 Vue.use(Buefy);
 Vue.config.productionTip = false;
@@ -24,11 +23,24 @@ Vue.component("app-footer", AppFooter);
 new Vue({
   el: '#app',
   router,
+  data() {
+    return {
+      firebase: null,
+      user: null,
+    };
+  },
   components: {
     App,
     AppHeader
   },
   template: '<App/>',
+  created() {
+    this.firebase = firebase;
+    this.firebase.initializeApp(firebaseConfig.FIREBASE_CONFIG);
+    this.firebase.auth().onAuthStateChanged(function (user) {
+      this.user = user;
+    });
+  },
 });
 
 // new Vue({

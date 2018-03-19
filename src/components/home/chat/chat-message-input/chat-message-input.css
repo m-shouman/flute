@@ -1,0 +1,14 @@
+.textarea {
+  resize: none;
+  min-height: 50px;
+  max-height: 50px;
+}
+
+.button {
+  height: 40px;
+  border-radius: 40px;
+  color: white;
+  background-color: darkgreen;
+  position: relative;
+  top: 5%;
+}
